@@ -55,7 +55,6 @@ def extract_current_weather(api_response):
     
     return {
         "temperature": current_temp,
-        "weather_code": current_weather_code,
         "weather_description": weather_description,
         "time": api_times[closest_index].isoformat()
     }
@@ -86,7 +85,6 @@ def extract_forecast_weather(api_response, forecast_days):
         "max_temperature": round(max_temp, 1),
         "min_temperature": round(min_temp, 1),
         "weather_condition": weather_description,
-        "weather_code": most_common_weather
     }
 
 
